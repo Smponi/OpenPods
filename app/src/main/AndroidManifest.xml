@@ -56,6 +56,27 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
 
+        //Activity for tasker Action
+        <activity android:name=".ActivityConfigBasicEvent"
+                  android:exported="true"
+                  android:icon="@mipmap/ic_launcher"
+                  android:label="My Event Condition">
+            <intent-filter>
+                <action android:name="net.dinglisch.android.tasker.ACTION_EDIT_EVENT" />
+            </intent-filter>
+        </activity>
+
+        //State Condition Tasker
+        <activity
+                android:name=".ActivityConfigBasicState"
+                android:exported="true"
+                android:icon="@mipmap/ic_launcher"
+                android:label="My State Condition">
+            <intent-filter>
+                <action android:name="com.twofortyfouram.locale.intent.action.EDIT_CONDITION" />
+            </intent-filter>
+        </activity>
+
         <receiver
             android:name=".receivers.StartupReceiver"
             android:enabled="true"
